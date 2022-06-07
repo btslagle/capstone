@@ -1,1 +1,73 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
+body {
+    background-color: rgb(0, 0, 255);
+    color: #e6e6e6;
+    font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+h1 {
+    margin-left: 30px;
+}
+
+li a {
+    display: flex;
+    color: #e6e6e6;
+    text-decoration: none;
+    list-style: none;
+    flex-direction: row;
+    border-color: #e6e6e6;
+    border: solid 3px;
+    width: 100px;
+    justify-content: center;
+}
+
+li a:hover {
+    background-color: #e6e6e6;
+    color: rgb(0, 0, 255);
+    border: solid 3px;
+    border-color: black;
+}
+
+span a {
+    color: #e6e6e6;
+    font-weight: 900;
+}
+
+span a:hover {
+    color: black;
+}
+
+li+li {
+    margin: 5px 0px;
+}
+
+header li {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+article {
+    display: flex;
+    box-sizing: border-box;
+    justify-content: center;
+}
+
+main h2 {
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    border: black solid 3px;
+    margin-left: 40px;
+    margin-right: 40px;
+    flex-direction: column;
+    align-items: center;
+}
