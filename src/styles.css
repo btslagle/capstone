@@ -6,6 +6,10 @@ body {
     background-color: grey;
 }
 
+img {
+    width: 300px;
+}
+
 h1 {
     background-color: rgb(14, 14, 103);
     margin: 0;
@@ -64,6 +68,28 @@ nav {
     display: flex;
     flex-direction: row;
     margin: 0;
+}
+
+.vehicles h2 {
+    display: flex;
+    justify-content: center;
+    border: none;
+    border: solid 3px;
+    padding: 15px;
+}
+
+.vehicles {
+    margin-left: 30px;
+    margin-right: 40px;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(14, 14, 103);
+    display: flex;
+}
+
+.vehicle-listing {
+    display: flex;
+    flex-direction: column;
 }
 
 article {
