@@ -1,13 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 body {
+    display: block;
     color: #e6e6e6;
     font-family: 'Kdam Thmor Pro', sans-serif;
     margin: 0;
     background-color: grey;
-}
-
-img {
-    width: 300px;
+    letter-spacing: .2;
 }
 
 h1 {
@@ -35,6 +33,13 @@ li a {
 }
 
 li a:hover {
+    color: #e6e6e6;
+    background-color: rgb(14, 14, 103);
+    border: solid 3px;
+    border-color: black;
+}
+
+.activebutton {
     background-color: #e6e6e6;
     color: rgb(14, 14, 103);
     border: solid 3px;
@@ -70,28 +75,6 @@ nav {
     margin: 0;
 }
 
-.vehicles h2 {
-    display: flex;
-    justify-content: center;
-    border: none;
-    border: solid 3px;
-    padding: 15px;
-}
-
-.vehicles {
-    margin-left: 30px;
-    margin-right: 40px;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgb(14, 14, 103);
-    display: flex;
-}
-
-.vehicle-listing {
-    display: flex;
-    flex-direction: column;
-}
-
 article {
     display: flex;
     box-sizing: border-box;
@@ -103,6 +86,7 @@ main h2 {
     justify-content: center;
     border: solid 3px;
     padding: 15px;
+    background-color: grey;
 }
 
 main {
@@ -113,6 +97,8 @@ main {
     flex-direction: column;
     align-items: center;
     background-color: rgb(14, 14, 103);
+    padding-bottom: 30px;
+    padding-top: 10px;
 }
 
 @media (max-width:800px) {
@@ -133,6 +119,7 @@ main {
     grid-column: 1;
     padding-left: 30px;
     border: 2px solid grey;
+    margin-left: 13px;
 }
 
 .grid-item-2 {
@@ -140,12 +127,15 @@ main {
     padding-left: 30px;
     border: 2px solid grey;
     border: 2px solid grey;
+    margin-right: 13px;
 }
 
 h3 {
     border: solid 3px;
     width: 220px;
     padding-left: 5px;
+    background-color: grey;
+    color: white;
 }
 
 @media (max-width:800px) {
