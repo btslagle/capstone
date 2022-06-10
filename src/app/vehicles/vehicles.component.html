@@ -1,9 +1,8 @@
 <section>
     <h2> Vehicles</h2>
     <ul>
-        <li>
-            <app-vehicle-listing [imageUrl]="'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHQh96n6xOf8aBX1UpfateV-6aZAu77jgk7Q&usqp=CAU'" [make]="'Make: Ford'" [model]="'Model: Mustang'" [year]="'Year: 2023'" [condition]="'Condition: Good'" [term]="'Remanning Term: 13 months'"
-                [monthly]="'Monthly Payment: $650.37'" [mileage]="'Mileage: 30,000'" [location]="'Location: Scottsdale, AZ 85054 '"></app-vehicle-listing>
+        <li *ngFor="let vehicle of vehicles">
+            <app-vehicle-listing [imageUrl]="vehicle.imageUrl" [make]="vehicle.make" [model]="vehicle.model" [year]="vehicle.year" [condition]="vehicle.condition" [term]="vehicle.term" [monthly]="vehicle.monthly" [mileage]="vehicle.mileage" [location]="vehicle.location"></app-vehicle-listing>
         </li>
     </ul>
 </section>
