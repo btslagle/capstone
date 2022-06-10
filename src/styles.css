@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap');
 body {
     display: block;
-    color: black;
+    color:hsl(0, 0%, 0%);
     font-family: 'Kdam Thmor Pro', sans-serif;
     margin: 0;
-    background-color: grey;
+    background-color: white;
     letter-spacing: .2;
 }
 
@@ -23,32 +23,56 @@ ul {
 
 li a {
     display: flex;
-    color: #e6e6e6;
-    text-decoration: none;
+    color:hsl(0, 0%, 0%);
+    text-decoration: underline;
     list-style: none;
     flex-direction: row;
     border-color: #e6e6e6;
-    border: solid 3px;
     width: 100px;
     justify-content: center;
 }
 
 li a:hover {
-    color: #e6e6e6;
-    background-color: rgb(14, 14, 103);
-    border: solid 3px;
-    border-color: black;
+    color: grey;
+    
 }
 
 .activebutton {
-    background-color: #e6e6e6;
-    color: rgb(14, 14, 103);
-    border: solid 3px;
-    border-color: black;
+    
+    color:hsl(0, 0%, 0%);
+    
 }
 
+.hero .hero-image {
+    max-width: 95%;
+    filter: contrast(50%);
+    z-index: 1;
+}
+
+.hero {
+    position: relative;
+    background-color:white;
+    
+}
+.call-to-action{
+    width: 75%;
+    font-size: 30px;
+}
+@media (max-width:800px){
+.call-to-action{
+    width: 75%;
+    font-size: 18px;
+}
+}
+
+.hero .call-to-action {
+    position: absolute;
+    bottom: 10%;
+    z-index: 10;
+    font-weight: 700;
+}    
 span a {
-    color: black6;
+    color:hsl(0, 0%, 0%);
     font-weight: 900;
 }
 
@@ -77,7 +101,7 @@ nav {
 }
 
 article {
-    display: flex;
+    display:flex;
     box-sizing: border-box;
     justify-content: center;
     margin-bottom: 20px;
@@ -128,7 +152,7 @@ main {
 h3 {
     width: 220px;
     padding-left: 5px;
-    color: black;
+    color:hsl(0, 0%, 0%);
 }
 
 @media (max-width:800px) {

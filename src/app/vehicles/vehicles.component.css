@@ -1,40 +1,41 @@
-.vehicles ul {
-    overflow: auto;
-}
 
-.vehicles h2 {
-    display: flex;
+.vehicles{
+    display:grid;
     justify-content: center;
-    border: none;
-    padding: 15px;
+    grid-template-columns: repeat(3 lfr);
+    grid-template-rows: auto a
+    
 }
-
-.vehicles {
-    display: block;
-    margin-left: 30px;
-    margin-right: 40px;
-    background-color: white;
-    line-height: .4;
-    padding-top: 10px;
-    padding-bottom: 25px;
-}
-
 .vehicle-listing {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    grid-template-columns: 300PX 1fr;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-
+@media (max-width: 800px){
 .vehicle-listing {
     display: flex;
-    margin-left: 30px;
-    margin-right: 40px;
-    flex-flow: column wrap;
-    align-items: center;
+    flex-flow:column wrap;
     justify-content: center;
+    margin-bottom: 20px;
+    font-size: 10px;
+    }
+}
+.vehicle-image {
+    grid-column:2 span 1;
+    grid-row: 1 span 1;
+}
+
+.details {
+    grid-column:2 span 1;
+    grid-row: 2 span 1;
     line-height: .4;
 }
 
-img {
-    width: 300px;
+h2 {
+    display: flex;
+    justify-content: center;
+    grid-column:2 span 1;
+    grid-row: 1 span 1;
 }
