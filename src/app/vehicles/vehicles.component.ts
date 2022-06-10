@@ -1,16 +1,13 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-vehicles',
   templateUrl: './vehicles.component.html',
   styleUrls: ['./vehicles.component.css']
 })
-export class VehiclesComponent implements OnInit {
-@Input() make!: string;
+export class VehiclesComponent {
 
-  constructor() { }
+  
 
-  ngOnInit(): void {
-  }
 
 }
