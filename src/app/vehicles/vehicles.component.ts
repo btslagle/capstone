@@ -14,8 +14,8 @@ export class VehiclesComponent implements OnInit {
   constructor(private vehicleService: VehicleService){}
 
   ngOnInit(): void {
-      this.vehicleService.fetchVehicles().subscribe(vehicles =>{
-      this.vehicles = vehicles
+      this.vehicleService.fetchVehicles().subscribe(response =>{
+      this.vehicles = response.vehicles
 
     }) 
   }
