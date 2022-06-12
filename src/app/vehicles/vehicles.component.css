@@ -1,7 +1,7 @@
 ul {
     display: grid;
-    grid-template-rows: 200px 200px;
-    grid-template-columns: 200px 200px;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto auto auto auto 1fr;
     flex-direction: column;
     justify-content: center;
     margin-left: 30px;
@@ -10,34 +10,22 @@ ul {
     grid-row-gap: 20px;
 }
 
-@media (max-width:800px) {
-    ul {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
 .vehicle-listing {
     display: grid;
     grid-template-rows: auto 1fr;
-    grid-template-columns: 300PX 1fr;
+    grid-template-columns: 200px;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-@media (max-width: 800px) {
-    .vehicle-listing {
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        margin-bottom: 20px;
-        font-size: 10px;
-    }
+img {
+    width: 300px;
 }
 
 .vehicle-image {
     grid-column: 2 span 1;
     grid-row: 1 span 1;
+    width: 200px;
 }
 
 .details {
@@ -50,4 +38,21 @@ h2 {
     display: flex;
     justify-content: center;
     margin-bottom: 80px;
+}
+
+@media (max-width:800px) {
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 800px) {
+    .vehicle-listing {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        margin-bottom: 20px;
+        font-size: 10px;
+    }
 }
