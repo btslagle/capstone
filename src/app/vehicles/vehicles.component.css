@@ -1,7 +1,7 @@
 ul {
     display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: auto auto auto auto auto 1fr;
+    grid-template-rows: 200px 200px;
+    grid-template-columns: 200px 200px;
     flex-direction: column;
     justify-content: center;
     margin-left: 30px;
@@ -38,7 +38,6 @@ ul {
 .vehicle-image {
     grid-column: 2 span 1;
     grid-row: 1 span 1;
-    width: 200px;
 }
 
 .details {
