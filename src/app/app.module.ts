@@ -8,6 +8,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { VehiclesComponent } from './vehicles/vehicles.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.compo
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

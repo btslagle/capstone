@@ -20,5 +20,9 @@ export class VehiclesComponent implements OnInit {
     }) 
   }
 
+  addVehicle(newVehicle: Vehicle){
+    console.log(newVehicle)
+
+  }
 
 }

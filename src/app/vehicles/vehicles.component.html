@@ -1,32 +1,32 @@
 <section>
     <h2> Vehicles</h2>
-    <form class="list-vehicle">
+    <form #newVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="addVehicle(newVehicleForm.value)">
         <label for="image-url">Image</label>
-        <input type="text" name="name" id="name" />
+        <input type="url" name="name" id="name" ngModel />
 
         <label for="make">Make</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" ngModel/>
 
         <label for="model">Model</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" ngModel/>
 
         <label for="year">Year</label>
-        <input type="text" name="name" id="name" />
+        <input type="number" name="name" id="name" ngModel />
 
         <label for="condition">Condition</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" ngModel />
 
         <label for="term">Remaining Term</label>
-        <input type="text" name="name" id="name" />
+        <input type="number" name="name" id="name" ngModel />
 
         <label for="monthly">Monthly Payment</label>
-        <input type="text" name="name" id="name" />
+        <input type="number" name="name" id="name" ngModel/>
 
         <label for="mileage">Mileage</label>
-        <input type="text" name="name" id="name" />
+        <input type="number" name="name" id="name" ngModel />
 
         <label for="location">Location</label>
-        <input type="text" name="name" id="name" />
+        <input type="text" name="name" id="name" ngModel/>
 
         <input type="submit" value="List your Vehicle">
 
@@ -35,7 +35,7 @@
 
     <ul>
         <li *ngFor=" let vehicle of vehicles ">
-            <app-vehicle-listing [imageUrl]="vehicle.imageUrl " [make]="vehicle.make " [model]="vehicle.model " [year]="vehicle.year " [condition]="vehicle.condition " [term]="vehicle.term " [monthly]="vehicle.monthly " [mileage]="vehicle.mileage
+            <app-vehicle-listing [imageUrl]="vehicle.imageUrl " [make]="vehicle.make " [model]="vehicle.model" [year]="vehicle.year" [condition]="vehicle.condition " [term]="vehicle.term " [monthly]="vehicle.monthly " [mileage]="vehicle.mileage
             " [location]="vehicle.location "></app-vehicle-listing>
         </li>
     </ul>

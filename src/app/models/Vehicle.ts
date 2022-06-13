@@ -2,10 +2,10 @@ export type Vehicle ={
     imageUrl: string;
     make: string;
     model: string;
-    year: string;
+    year: number;
     condition: string;
-    term: string;
-    monthly: string
-    mileage: string;
+    term: number;
+    monthly: number;
+    mileage: number;
     location:string;
 }
