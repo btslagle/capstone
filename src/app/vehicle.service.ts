@@ -7,6 +7,10 @@ type VehiclesResponse = {
   vehicles: Vehicle[];
 };
 
+type VehicleResponse = {
+  vehicle: Vehicle;
+}
+
 const vehiclesEndpoint = `${environment.baseApiUrl}/vehicles`
 @Injectable({
   providedIn: 'root',
@@ -18,4 +22,9 @@ export class VehicleService {
   fetchVehicles() {
     return this.http.get<VehiclesResponse>(vehiclesEndpoint);
   }
+
+  addVehicle(vehicle: Vehicle){
+    return this.http.post<VehicleResponse>(vehiclesEndpoint, vehicle);
+  }
+
 }

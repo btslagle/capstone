@@ -21,8 +21,9 @@ export class VehiclesComponent implements OnInit {
   }
 
   addVehicle(newVehicle: Vehicle){
-    console.log(newVehicle)
-
+    this.vehicleService.addVehicle(newVehicle).subscribe(response => {
+      this.vehicles = [response.vehicle,...this.vehicles]
+    })
   }
 
 }
