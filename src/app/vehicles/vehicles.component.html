@@ -1,8 +1,42 @@
 <section>
     <h2> Vehicles</h2>
+    <form class="list-vehicle">
+        <label for="image-url">Image</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="make">Make</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="model">Model</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="year">Year</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="condition">Condition</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="term">Remaining Term</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="monthly">Monthly Payment</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="mileage">Mileage</label>
+        <input type="text" name="name" id="name" />
+
+        <label for="location">Location</label>
+        <input type="text" name="name" id="name" />
+
+        <input type="submit" value="List your Vehicle">
+
+
+    </form>
+
     <ul>
-        <li *ngFor="let vehicle of vehicles">
-            <app-vehicle-listing [imageUrl]="vehicle.imageUrl" [make]="vehicle.make" [model]="vehicle.model" [year]="vehicle.year" [condition]="vehicle.condition" [term]="vehicle.term" [monthly]="vehicle.monthly" [mileage]="vehicle.mileage" [location]="vehicle.location"></app-vehicle-listing>
+        <li *ngFor=" let vehicle of vehicles ">
+            <app-vehicle-listing [imageUrl]="vehicle.imageUrl " [make]="vehicle.make " [model]="vehicle.model " [year]="vehicle.year " [condition]="vehicle.condition " [term]="vehicle.term " [monthly]="vehicle.monthly " [mileage]="vehicle.mileage
+            " [location]="vehicle.location "></app-vehicle-listing>
         </li>
     </ul>
 </section>
