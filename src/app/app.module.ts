@@ -9,6 +9,7 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.component';
 import { FormsModule } from '@angular/forms';
+import { WeatherComponent } from './weather/weather.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     PageNotFoundComponent,
     VehiclesComponent,
     NavigationComponent,
-    VehicleListingComponent
+    VehicleListingComponent,
+    WeatherComponent
   ],
   imports: [
     BrowserModule,
