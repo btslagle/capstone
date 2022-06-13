@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { of } from 'rxjs';
 import { Vehicle } from './models/Vehicle';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';

@@ -9,11 +9,11 @@ export class VehicleListingComponent  {
   @Input() imageUrl!: string
   @Input() make!: string;
   @Input() model!: string;
-  @Input() year!: number;
+  @Input() year!: string;
   @Input() condition!: string;
-  @Input() term!: number;
-  @Input() monthly!: number;
-  @Input() mileage!: number;
+  @Input() term!: string;
+  @Input() monthly!: string;
+  @Input() mileage!: string;
   @Input() location!: string;
 
 
