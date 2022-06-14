@@ -19,6 +19,8 @@ weather: WeatherService[] = []
       this.weather
     })
   }
+
+
 }
 
 

@@ -1,6 +1,7 @@
 <div class="vehicle-listing">
     <img class="vehicle-image" src="{{imageUrl}}" />
     <div class="details">
+        <p class="id">Id:{{id}}</p>
         <p class="make"> Make: {{make}}</p>
         <p class="model"> Model: {{model}}</p>
         <p class="year">Year: {{year}}</p>
@@ -9,5 +10,8 @@
         <p class="monthly">Monthly Payment: {{monthly}}</p>
         <p class="mileage">Mileage: {{mileage}}</p>
         <p class="location">Location: {{location}}</p>
+        <button (click)="onDeleteVehicle()">Delete</button>
     </div>
+
+
 </div>
