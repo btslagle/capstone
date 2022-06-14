@@ -25,5 +25,6 @@ export class VehiclesComponent implements OnInit {
       this.vehicles = [response.vehicle,...this.vehicles]
     })
   }
+  
 
 }

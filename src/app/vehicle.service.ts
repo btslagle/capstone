@@ -27,4 +27,8 @@ export class VehicleService {
     return this.http.post<VehicleResponse>(vehiclesEndpoint, vehicle);
   }
 
+  updateVehicle(vehicle: Vehicle){
+    return this.http.put<VehicleResponse>(vehiclesEndpoint, vehicle)
+  }
+
 }
