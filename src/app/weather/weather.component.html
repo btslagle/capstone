@@ -1,6 +1,6 @@
 <h3>Check the Weather</h3>
 
-<form name="input">
+<form #weatherForm="ngForm" (ngSubmit)="fetchWeather()">
     <label for="location">Please enter your location</label>
     <input type="text" id="location" name="location" placeholder="City or Zip Code eg. Columbia, 38401" required>
     <label for="state">Optional: State</label>
@@ -8,5 +8,5 @@
         <option value="">-</option>
     </select>
     <br>
-    <button type="submit">Check the weatherr</button>
+    <button type="submit" ngSumbit="(fetchWeather()">Check the weatherr</button>
 </form>

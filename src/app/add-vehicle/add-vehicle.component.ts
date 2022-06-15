@@ -15,3 +15,5 @@ export class AddVehicleComponent  {
   addVehicle(newVehicle: Vehicle){
     this.vehicleService.addVehicle(newVehicle)}
 }
+
+

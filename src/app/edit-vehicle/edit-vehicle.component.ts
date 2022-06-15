@@ -24,8 +24,8 @@ export class EditVehicleComponent  {
 
   constructor(private vehicleService: VehicleService, private route: ActivatedRoute){}
 
-  updateVehicle(updateVehicle: Vehicle){
-    this.vehicleService.editVehicle(updateVehicle)
+  updateVehicle(updatedVehicle: Vehicle){
+    this.vehicleService.updateVehicle(updatedVehicle)
   }
 
 }

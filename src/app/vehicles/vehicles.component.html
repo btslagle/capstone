@@ -1,7 +1,7 @@
 <section>
     <h2> Vehicles</h2>
     <app-edit-vehicle></app-edit-vehicle>
-
+    <app-weather></app-weather>
     <ul>
         <li *ngFor=" let vehicle of vehicles ">
             <app-vehicle-listing [id]="vehicle.id" [imageUrl]="vehicle.imageUrl " [make]="vehicle.make " [model]="vehicle.model" [year]="vehicle.year" [condition]="vehicle.condition " [term]="vehicle.term " [monthly]="vehicle.monthly " [mileage]="vehicle.mileage

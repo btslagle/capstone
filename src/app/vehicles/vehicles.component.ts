@@ -24,6 +24,12 @@ export class VehiclesComponent implements OnInit {
     this.vehicleService.addVehicle(newVehicle)
     
   }
+
+  
+  updateVehicle(updateVehicle: Vehicle){
+    this.vehicleService.updateVehicle(updateVehicle)
+  }
+
   
 
 }

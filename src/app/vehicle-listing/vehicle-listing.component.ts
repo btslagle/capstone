@@ -9,8 +9,6 @@ import { Vehicle } from '../models/Vehicle';
 
 
 export class VehicleListingComponent  {
-  vehicles: Vehicle[]= []
-
   @Input() id? : number;
   @Input() imageUrl!: string
   @Input() make!: string;
@@ -21,11 +19,17 @@ export class VehicleListingComponent  {
   @Input() monthly!: string;
   @Input() mileage!: string;
   @Input() location!: string;
-
-
-
+  vehicles: Vehicle[] = []
   constructor(private vehicleService: VehicleService){}
   onDeleteVehicle() {
     this.vehicleService.deleteVehicle(this.id).subscribe();
 }
+
+  updateVehicle(updatedVehicle: Vehicle){
+  this.vehicleService.updateVehicle(updatedVehicle)
+}
+  
+
+
+
 }

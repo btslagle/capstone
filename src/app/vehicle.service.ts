@@ -30,7 +30,7 @@ export class VehicleService {
     });
   }
 
-  editVehicle(vehicle: Vehicle){
+  updateVehicle(vehicle: Vehicle){
     return this.http.put<VehicleResponse>(`${vehiclesEndpoint}/${vehicle.id}`, vehicle).subscribe(response => {
       this.vehicles=[response.vehicle]
     })

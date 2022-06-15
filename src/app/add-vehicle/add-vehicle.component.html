@@ -1,4 +1,4 @@
-<form #newVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="addVehicle(newVehicleForm.value)">
+<form #vehicleForm="ngForm" class="list-vehicle" (ngSubmit)="addVehicle(vehicleForm.value)">
     <label for="image-url">Image</label>
     <input type="url" name="imageUrl" id="imageUrl" ngModel />
 

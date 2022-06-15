@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 type WeatherResponse = {
   response: Response;
   }
-
+  const baseWeatherURL = 'http:api.weatherapi.com/v1/current.json?key=c1bee2b63a354d23b0931043221306&q=38401' 
 const baseWeatherApi= 'http://api.weatherapi.com/v1/current.json?Weather_API_Key &q';
 
 @Injectable({
@@ -14,9 +14,11 @@ export class WeatherService {
 weather: WeatherService[] = []
 
   constructor(private http: HttpClient) {}
-  fetchVehicles() {
-    return this.http.get<WeatherResponse>(baseWeatherApi).subscribe(response => {
+  fetchWeather() {
+    this.http.get<WeatherResponse>(baseWeatherURL).subscribe(response => {
       this.weather
+      console.log(response)
+      
     })
   }
 
