@@ -12,6 +12,12 @@ type VehicleResponse = {
   vehicle: Vehicle;
 }
 
+interface LocationResponse{
+  region: string;
+  city:string;
+}
+
+
 const vehiclesEndpoint = `${environment.baseApiUrl}/vehicles`
 @Injectable({
   providedIn: 'root',
@@ -39,8 +45,13 @@ export class VehicleService {
   GetVechicleById(id:number): Observable<Vehicle> {
   return this.http.get<Vehicle>(`${vehiclesEndpoint}/${id}`)
 }
-deleteVehicle(id: any) {
+  deleteVehicle(id: any) {
   return this.http.delete<Vehicle>(`${vehiclesEndpoint}/${id}`);
+}
+
+  getLocation(){
+  this.http.get<LocationResponse>('http://ip-api.com/json/')
+  
 }
 
 }

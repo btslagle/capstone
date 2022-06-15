@@ -9,7 +9,6 @@ import { VehiclesComponent } from './vehicles/vehicles.component';
 import { NavigationComponent } from './navigation/navigation.component';
 import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.component';
 import { FormsModule } from '@angular/forms';
-import { WeatherComponent } from './weather/weather.component';
 import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
 import { EditVehicleComponent } from './edit-vehicle/edit-vehicle.component';
 
@@ -21,7 +20,6 @@ import { EditVehicleComponent } from './edit-vehicle/edit-vehicle.component';
     VehiclesComponent,
     NavigationComponent,
     VehicleListingComponent,
-    WeatherComponent,
     AddVehicleComponent,
     EditVehicleComponent
   ],
