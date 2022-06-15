@@ -6,8 +6,12 @@ import { Vehicle } from '../models/Vehicle';
   templateUrl: './vehicle-listing.component.html',
   styleUrls: ['./vehicle-listing.component.css']
 })
+
+
 export class VehicleListingComponent  {
-  @Input()id? : number;
+  vehicles: Vehicle[]= []
+
+  @Input() id? : number;
   @Input() imageUrl!: string
   @Input() make!: string;
   @Input() model!: string;
@@ -23,8 +27,5 @@ export class VehicleListingComponent  {
   constructor(private vehicleService: VehicleService){}
   onDeleteVehicle() {
     this.vehicleService.deleteVehicle(this.id).subscribe();
-   
-    
-
 }
 }

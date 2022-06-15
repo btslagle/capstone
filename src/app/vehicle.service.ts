@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 
 type VehiclesResponse = {
   vehicles: Vehicle[];
-};
+}
 
 type VehicleResponse = {
   vehicle: Vehicle;
@@ -31,7 +31,9 @@ export class VehicleService {
   }
 
   editVehicle(vehicle: Vehicle){
-    return this.http.put<VehicleResponse>(`${vehiclesEndpoint}/${vehicle.id}`, vehicle)
+    return this.http.put<VehicleResponse>(`${vehiclesEndpoint}/${vehicle.id}`, vehicle).subscribe(response => {
+      this.vehicles=[response.vehicle]
+    })
   }
 
   GetVechicleById(id:number): Observable<Vehicle> {

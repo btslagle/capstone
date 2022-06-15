@@ -35,11 +35,7 @@ export class AppComponent {
   addVehicle(newVehicle: Vehicle){
     this.vehicleService.addVehicle(newVehicle)
   }
-  updateVehicle(vehicle: Vehicle){
-    this.vehicleService.editVehicle(vehicle).subscribe(response => {
-      console.log(vehicle)
-    })
-  }
+ 
 }
 
  

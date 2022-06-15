@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component,  Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Vehicle } from '../models/Vehicle';
 import { VehicleService } from '../vehicle.service'
@@ -23,4 +23,9 @@ export class EditVehicleComponent  {
   @Input() location!: string;
 
   constructor(private vehicleService: VehicleService, private route: ActivatedRoute){}
+
+  updateVehicle(updateVehicle: Vehicle){
+    this.vehicleService.editVehicle(updateVehicle)
+  }
+
 }

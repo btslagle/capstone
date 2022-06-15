@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Vehicle } from '../models/Vehicle';
 import { VehicleService } from '../vehicle.service';
 @Component({
@@ -6,13 +6,12 @@ import { VehicleService } from '../vehicle.service';
   templateUrl: './add-vehicle.component.html',
   styleUrls: ['./add-vehicle.component.css']
 })
-export class AddVehicleComponent implements OnInit {
+export class AddVehicleComponent  {
   
   
   constructor(private vehicleService: VehicleService){}
   vehicles: Vehicle[] = []
-  ngOnInit(): void {
-  }
+  
   addVehicle(newVehicle: Vehicle){
     this.vehicleService.addVehicle(newVehicle)}
 }
