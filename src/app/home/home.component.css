@@ -1,5 +1,4 @@
 .hero-image {
-    background-color: black;
     background-color: hsla(222, 86%, 38%, 0.77);
     z-index: 1
 }
@@ -14,12 +13,6 @@
     z-index: 10;
 }
 
-.call-to-action {
-    letter-spacing: 2px;
-    color: white;
-    line-height: 0;
-}
-
 button:hover {
     background-color: #328de988;
     ;
@@ -27,14 +20,14 @@ button:hover {
 }
 
 button {
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin-top: 8px;
     padding: 12px 24px;
     background-color: #256fb8;
     color: white;
     border: none;
     border-radius: 6px;
     font-family: 'Kdam Thmor Pro', sans-serif;
+    margin-left: 15px;
 }
 
 button:focus {
@@ -45,4 +38,54 @@ button:focus {
 
 button:active {
     transform: scale(0.95);
+}
+
+.hero .hero-image {
+    max-width: 100%;
+    filter: contrast(50%);
+    z-index: 1;
+}
+
+.hero {
+    position: relative;
+    background-color: white;
+}
+
+.call-to-action {
+    width: 66%;
+    font-size: 18px;
+    color: white;
+}
+
+@media (max-width:800px) {
+    .call-to-action {
+        width: 100%;
+        font-size: 12px;
+    }
+}
+
+.hero .call-to-action {
+    position: absolute;
+    bottom: 10%;
+    z-index: 10;
+    font-weight: 700;
+}
+
+.call-to-action p {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 800px) {
+    button {
+        margin-top: 8px;
+        padding: 10px 10px;
+        background-color: #256fb8;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        font-family: 'Kdam Thmor Pro', sans-serif;
+        font-size: 12px;
+    }
 }

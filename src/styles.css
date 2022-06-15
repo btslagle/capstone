@@ -39,45 +39,6 @@ li a:hover {
     color: hsl(0, 0%, 0%);
 }
 
-.hero .hero-image {
-    max-width: 100%;
-    filter: contrast(50%);
-    z-index: 1;
-}
-
-.hero {
-    position: relative;
-    background-color: white;
-}
-
-.call-to-action {
-    width: 75%;
-    font-size: 30px;
-}
-
-@media (max-width:800px) {
-    .call-to-action {
-        width: 75%;
-        font-size: 12px;
-    }
-}
-
-.hero .call-to-action {
-    position: absolute;
-    bottom: 10%;
-    z-index: 10;
-    font-weight: 700;
-}
-
-span a {
-    color: hsl(0, 0%, 0%);
-    font-weight: 900;
-}
-
-span a:hover {
-    color: grey;
-}
-
 nav>ul>li+li {
     margin-left: 20px;
 }
