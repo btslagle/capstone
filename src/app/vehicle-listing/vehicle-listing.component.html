@@ -6,15 +6,14 @@
         <p class="model"> Model: {{model}}</p>
         <p class="year">Year: {{year}}</p>
         <p class="condition">Condition: {{condition}}</p>
-        <p class="term">Remaining Payments: {{term}} months</p>
+        <p class="term">Remaining Payments: {{term}} </p>
         <p class="monthly">Monthly Payment: {{monthly}}</p>
         <p class="mileage">Mileage: {{mileage}}</p>
         <p class="location">Location: {{location}}</p>
-        <button (click)="onDeleteVehicle()">Transfered</button>
+        <button (click)="onDeleteVehicle()">Transferred</button>
         <button (click)="toggleEdit()">Edit</button>
     </div>
 </div>
-
 
 <form *ngIf="edit" #editVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="updateVehicle(editVehicleForm.value)">
 
