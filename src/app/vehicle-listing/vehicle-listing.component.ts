@@ -39,9 +39,13 @@ export class VehicleListingComponent {
 
   onDeleteVehicle() {
     this.vehicleService.deleteVehicle(this.id).subscribe();
+ 
+    this.router.navigate(['/vehicles'])
   }
 
   updateVehicle(updatedVehicle: Vehicle) {
     this.vehicleService.updateVehicle(updatedVehicle);
+    this.router.navigate(['/vehicles'])
+    
   }
 }

@@ -4,6 +4,7 @@
 
 
 [Deployed Link](https://easyxfer.netlify.app/vehicles)
+[Database Deployed Link](https://easyxfer-backend.herokuapp.com/vehicles)            ]
 
 ![EasyXfer](EasyXfer.png)
 
