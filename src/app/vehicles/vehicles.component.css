@@ -67,6 +67,7 @@ h2 {
 
 form {
     margin-top: 50px;
+    box-sizing: border-box;
 }
 
 input,

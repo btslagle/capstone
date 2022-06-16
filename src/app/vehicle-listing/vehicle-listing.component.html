@@ -11,11 +11,12 @@
         <p class="mileage">Mileage: {{mileage}}</p>
         <p class="location">Location: {{location}}</p>
         <button (click)="onDeleteVehicle()">Transfered</button>
-        <button>Edit</button>
+        <button (click)="toggleEdit()">Edit</button>
     </div>
 </div>
 
-<form #editVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="updateVehicle(editVehicleForm.value)">
+
+<form *ngIf="edit" #editVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="updateVehicle(editVehicleForm.value)">
 
     <label class="ID" for="id">id</label>
     <input class="id" type="number" name="id" id="id" [(ngModel)]="id" />

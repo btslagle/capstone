@@ -1,7 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { Vehicle } from '../models/Vehicle';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Location } from '@angular/common';
+
 @Component({
   selector: 'app-vehicle-listing',
   templateUrl: './vehicle-listing.component.html',
@@ -9,7 +11,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class VehicleListingComponent {
   edit: boolean = false;
-  vehicle: any;
+  
   vehicles!: Vehicle[];
 
   router: Router;
@@ -24,11 +26,14 @@ export class VehicleListingComponent {
   @Input() monthly!: string;
   @Input() mileage!: string;
   @Input() location!: string;
+  @Input() vehicle!: Vehicle;
+  @Output() deleteClick= new EventEmitter()
 
   constructor(
     private vehicleService: VehicleService,
     private route: ActivatedRoute,
-    router: Router
+    router: Router,
+    private locations: Location,
   ) {
     this.router = router;
   }
@@ -38,14 +43,13 @@ export class VehicleListingComponent {
   }
 
   onDeleteVehicle() {
-    this.vehicleService.deleteVehicle(this.id).subscribe();
- 
-    this.router.navigate(['/vehicles'])
+    this.deleteClick.emit(this.vehicle)
   }
 
   updateVehicle(updatedVehicle: Vehicle) {
     this.vehicleService.updateVehicle(updatedVehicle);
-    this.router.navigate(['/vehicles'])
+    this.toggleEdit();
+    
     
   }
 }

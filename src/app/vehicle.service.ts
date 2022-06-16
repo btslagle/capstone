@@ -46,12 +46,10 @@ export class VehicleService {
 }
   deleteVehicle(id: any) {
   return this.http.delete<Vehicle>(`${vehiclesEndpoint}/${id}`);
+  
 }
   getLocation(){
   this.http.get<LocationResponse>('http://ip-api.com/json/')
   
 }
-  toggleEdit(){
-    console.log('Hello')
-  }
 }

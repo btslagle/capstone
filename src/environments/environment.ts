@@ -5,11 +5,10 @@
 export const environment = {
   production: false,
   baseApiUrl: "http://localhost:8080",
+  weatherApiKey:'https://api.openweathermap.org/data/2.5/weather?lat=35.925064&lon=-86.868889&appid=213454ad431f0929720b664504122001&units=imperial'
 };
 
-export const  apiKeyConfig= {
- weatherApiKey:'https://api.openweathermap.org/data/2.5/weather?lat=35.925064&lon=-86.868889&appid=629739f6bd1c5cb13bebb03e118e7847&units=imperial',
-}
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -1,7 +1,7 @@
 import { Component, OnInit} from '@angular/core';
 import { Vehicle } from '../models/Vehicle';
 import { VehicleService } from '../vehicle.service';
-
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-vehicles',
@@ -11,7 +11,7 @@ import { VehicleService } from '../vehicle.service';
 export class VehiclesComponent implements OnInit {
   vehicles: Vehicle[] = []
 
-  constructor(private vehicleService: VehicleService){}
+  constructor(private vehicleService: VehicleService, private location:Location){}
 
   ngOnInit(): void {
       this.vehicleService.fetchVehicles().subscribe(response =>{
@@ -24,10 +24,18 @@ export class VehiclesComponent implements OnInit {
     this.vehicleService.addVehicle(newVehicle)
     
   }
- 
+
   updateVehicle(updateVehicle: Vehicle){
     this.vehicleService.updateVehicle(updateVehicle)
   }
+
+  deleteVehicle(deletedVehicle: Vehicle){
+    this.vehicleService.deleteVehicle(deletedVehicle.id).subscribe(()=>{
+      this.vehicles = this.vehicles.filter(v =>v.id !== deletedVehicle.id)
+    });
+
+  }
+
 
   
 

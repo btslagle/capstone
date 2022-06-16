@@ -1,5 +1,6 @@
 form {
     margin-top: 50px;
+    margin-right: 20px;
 }
 
 input {
@@ -42,6 +43,13 @@ input {
 .listing-page {
     display: flex;
     justify-content: space-between;
+}
+
+@media (max-width:900) {
+    .listing-page {
+        display: block;
+        flex-direction: column;
+    }
 }
 
 #divWeatherMain {
