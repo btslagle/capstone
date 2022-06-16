@@ -11,42 +11,41 @@
         <p class="mileage">Mileage: {{mileage}}</p>
         <p class="location">Location: {{location}}</p>
         <button (click)="onDeleteVehicle()">Transfered</button>
-
-
-
+        <button>Edit</button>
     </div>
-    <form #editVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="updateVehicle(editVehicleForm.value)">
-
-        <label class="id" for="id">id</label>
-        <input class="id" type="number" name="id" id="id" [(ngModel)]="id" />
-
-        <label for="image-url">Image</label>
-        <input type="url" name="imageUrl" id="imageUrl" [(ngModel)]="imageUrl" />
-
-        <label for="make">Make</label>
-        <input type="text" name="make" id="make" [(ngModel)]="make" />
-
-        <label for="model">Model</label>
-        <input type="text" name="model" id="model" [(ngModel)]="model" />
-
-        <label for="year">Year</label>
-        <input type="text" name="year" id="year" [(ngModel)]="year" />
-
-        <label for="condition">Condition</label>
-        <input type="text" name="condition" id="condition" [(ngModel)]="condition" />
-
-        <label for="term">Remaining Term</label>
-        <input type="text" name="term" id="term" [(ngModel)]="term" />
-
-        <label for="monthly">Monthly Payment</label>
-        <input type="text" name="monthly" id="monthly" [(ngModel)]="monthly" />
-
-        <label for="mileage">Mileage</label>
-        <input type="text" name="mileage" id="mileage" [(ngModel)]="mileage" />
-
-        <label for="location">Location</label>
-        <input type="text" name="location" id="location" [(ngModel)]="location" />
-
-        <input type="submit" value="Edit">
-    </form>
 </div>
+
+<form #editVehicleForm="ngForm" class="list-vehicle" (ngSubmit)="updateVehicle(editVehicleForm.value)">
+
+    <label class="ID" for="id">id</label>
+    <input class="id" type="number" name="id" id="id" [(ngModel)]="id" />
+
+    <label for="image-url">Image</label>
+    <input type="url" name="imageUrl" id="imageUrl" [(ngModel)]="imageUrl" />
+
+    <label for="make">Make</label>
+    <input type="text" name="make" id="make" [(ngModel)]="make" />
+
+    <label for="model">Model</label>
+    <input type="text" name="model" id="model" [(ngModel)]="model" />
+
+    <label for="year">Year</label>
+    <input type="text" name="year" id="year" [(ngModel)]="year" />
+
+    <label for="condition">Condition</label>
+    <input type="text" name="condition" id="condition" [(ngModel)]="condition" />
+
+    <label for="term">Remaining Term</label>
+    <input type="text" name="term" id="term" [(ngModel)]="term" />
+
+    <label for="monthly">Monthly Payment</label>
+    <input type="text" name="monthly" id="monthly" [(ngModel)]="monthly" />
+
+    <label for="mileage">Mileage</label>
+    <input type="text" name="mileage" id="mileage" [(ngModel)]="mileage" />
+
+    <label for="location">Location</label>
+    <input type="text" name="location" id="location" [(ngModel)]="location" />
+
+    <input type="submit" value="Edit">
+</form>
