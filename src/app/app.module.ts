@@ -10,8 +10,6 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.component';
 import { FormsModule } from '@angular/forms';
 import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
-import { EditVehicleComponent } from './edit-vehicle/edit-vehicle.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +19,6 @@ import { EditVehicleComponent } from './edit-vehicle/edit-vehicle.component';
     NavigationComponent,
     VehicleListingComponent,
     AddVehicleComponent,
-    EditVehicleComponent
   ],
   imports: [
     BrowserModule,
