@@ -58,6 +58,10 @@ export class AddVehicleComponent {
   addVehicle(newVehicle: Vehicle) {
     this.vehicleService.addVehicle(newVehicle);
     this.router.navigate(['/vehicles']);
-    this.location.replaceState
-  }
+    this.vehicleService.fetchVehicles().subscribe(response =>{
+      this.vehicles = response.vehicles
+
+    
+  })
+}
 }
