@@ -30,6 +30,7 @@ export class MessageComponent   {
    @Input() location!: string;
    @Input() vehicle!: Vehicle;
    @Output() closeClick = new EventEmitter();
+  vehicles?: Vehicle[];
   
   
 
@@ -41,5 +42,8 @@ export class MessageComponent   {
   ) {
     this.router = router;
  }
+ close(){
+  window.location.reload();
 
+}
 }
