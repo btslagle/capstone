@@ -3,6 +3,7 @@ import { ActivatedRoute, Params, Router } from '@angular/router';
 import { VehicleService } from '../vehicle.service';
 import { Vehicle } from '../models/Vehicle';
 import { Location } from '@angular/common';
+import { __classPrivateFieldSet } from 'tslib';
 
 @Component({
   selector: 'app-message',
@@ -28,7 +29,7 @@ export class MessageComponent   {
    @Input() mileage!: string;
    @Input() location!: string;
    @Input() vehicle!: Vehicle;
-  
+   @Output() closeClick = new EventEmitter();
   
   
 
@@ -39,6 +40,6 @@ export class MessageComponent   {
     private locations: Location,
   ) {
     this.router = router;
-  
-}
+ }
+
 }

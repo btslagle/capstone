@@ -1,34 +1,26 @@
 <h2>Message for more information</h2>
 <div class="message-container">
-
-<div class="message-box" *ngIf="vehicle">
+  <div class="message-box" *ngIf="vehicle">
     <div class="vehicle-listing">
-      <img class="vehicle-image" src="{{vehicle.imageUrl}}" />
+      <img class="vehicle-image" src="{{ vehicle.imageUrl }}" />
       <div class="details">
-          <p class="id">Id:{{vehicle.id}}</p>
-          <p class="make"> Make: {{vehicle.make}}</p>
-          <p class="model"> Model: {{vehicle.model}}</p>
-          <p class="year">Year: {{vehicle.year}}</p>
-          <p class="condition">Condition: {{vehicle.condition}}</p>
-          <p class="term">Remaining Payments: {{vehicle.term}} </p>
-          <p class="monthly">Monthly Payment: {{vehicle.monthly}}</p>
-          <p class="mileage">Mileage: {{vehicle.mileage}}</p>
-          <p class="location">Location: {{vehicle.location}}</p>
+        <p class="id">Id:{{ vehicle.id }}</p>
+        <p class="make">Make: {{ vehicle.make }}</p>
+        <p class="model">Model: {{ vehicle.model }}</p>
+        <p class="year">Year: {{ vehicle.year }}</p>
+        <p class="condition">Condition: {{ vehicle.condition }}</p>
+        <p class="term">Remaining Payments: {{ vehicle.term }}</p>
+        <p class="monthly">Monthly Payment: {{ vehicle.monthly }}</p>
+        <p class="mileage">Mileage: {{ vehicle.mileage }}</p>
+        <p class="location">Location: {{ vehicle.location }}</p>
       </div>
-
-      
+    </div>
   </div>
-
-  
-  </div>
-   <div>
+  <div>
     <div class="message-form">
       <label>Message</label>
-      <input type="text" name="name"/>
-      
-    
+      <input type="text" name="name" />
+      <button type="sumbit" name="submit">Submit</button>
     </div>
-   </div>
-
-
+  </div>
 </div>
