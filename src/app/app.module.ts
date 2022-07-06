@@ -10,6 +10,7 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { VehicleListingComponent } from './vehicle-listing/vehicle-listing.component';
 import { FormsModule } from '@angular/forms';
 import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
+import { MessageComponent } from './message/message.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -19,6 +20,7 @@ import { AddVehicleComponent } from './add-vehicle/add-vehicle.component';
     NavigationComponent,
     VehicleListingComponent,
     AddVehicleComponent,
+    MessageComponent,
   ],
   imports: [
     BrowserModule,

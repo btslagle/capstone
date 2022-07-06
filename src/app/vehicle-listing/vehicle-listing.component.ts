@@ -1,8 +1,9 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
 import { VehicleService } from '../vehicle.service';
 import { Vehicle } from '../models/Vehicle';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute, RouterLink } from '@angular/router';
 import { Location } from '@angular/common';
+
 
 @Component({
   selector: 'app-vehicle-listing',
@@ -11,7 +12,7 @@ import { Location } from '@angular/common';
 })
 export class VehicleListingComponent {
   edit: boolean = false;
-  
+  selectedVehicle?: Vehicle;
   vehicles!: Vehicle[];
 
   router: Router;
@@ -27,15 +28,18 @@ export class VehicleListingComponent {
   @Input() mileage!: string;
   @Input() location!: string;
   @Input() vehicle!: Vehicle;
-  @Output() deleteClick= new EventEmitter()
+  @Output() deleteClick = new EventEmitter();
 
   constructor(
     private vehicleService: VehicleService,
     private route: ActivatedRoute,
     router: Router,
-    private locations: Location,
+    private locations: Location
   ) {
     this.router = router;
+  }
+  ngOnInit(): void {
+     
   }
 
   toggleEdit() {
@@ -43,13 +47,13 @@ export class VehicleListingComponent {
   }
 
   onDeleteVehicle() {
-    this.deleteClick.emit(this.vehicle)
+    this.deleteClick.emit(this.vehicle);
   }
 
   updateVehicle(updatedVehicle: Vehicle) {
     this.vehicleService.updateVehicle(updatedVehicle);
     this.toggleEdit();
-    
-    
   }
-}
+
+  }
+

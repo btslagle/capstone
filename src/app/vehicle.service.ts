@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 
 type VehiclesResponse = {
   vehicles: Vehicle[];
+  selectedvehicle: Vehicle;
 }
 
 type VehicleResponse = {
@@ -29,6 +30,10 @@ export class VehicleService {
     return this.http.get<VehiclesResponse>(vehiclesEndpoint);
   }
 
+  public getVehicle(id:any):Observable<Vehicle>{
+    return  this.http.get<Vehicle>(`${vehiclesEndpoint}/${id}`)
+  }
+
   addVehicle(vehicle: Vehicle){
     return this.http.post<VehicleResponse>(vehiclesEndpoint, vehicle).subscribe(response => {
       this.vehicles = [response.vehicle,...this.vehicles]
@@ -41,8 +46,8 @@ export class VehicleService {
     })
   }
 
-  GetVechicleById(id:number): Observable<Vehicle> {
-  return this.http.get<Vehicle>(`${vehiclesEndpoint}/${id}`)
+  GetVechicleById(vehicle:Vehicle): Observable<Vehicle> {
+  return this.http.get<Vehicle>(`${vehiclesEndpoint}/${vehicle.id}`)
 }
   deleteVehicle(id: any) {
   return this.http.delete<Vehicle>(`${vehiclesEndpoint}/${id}`);

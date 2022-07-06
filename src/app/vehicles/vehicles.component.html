@@ -1,12 +1,25 @@
 <section>
-    <h2> Vehicles</h2>
+  <h2>Vehicles</h2>
 
+ <app-message *ngIf="selectedVehicle" [vehicle]="selectedVehicle" ></app-message>
+  
+  <ul>
+    <li *ngFor="let vehicle of vehicles" (click)="onSelect(vehicle)">
+      <app-vehicle-listing
+        [id]="vehicle.id"
+        [imageUrl]="vehicle.imageUrl"
+        [make]="vehicle.make"
+        [model]="vehicle.model"
+        [year]="vehicle.year"
+        [condition]="vehicle.condition"
+        [term]="vehicle.term"
+        [monthly]="vehicle.monthly"
+        [mileage]="vehicle.mileage"
+        [location]="vehicle.location"
+        [vehicle]="vehicle"
+        (deleteClick)="deleteVehicle($event)"
+      ></app-vehicle-listing>
+    </li>
+  </ul>
 
-    <ul>
-        <li *ngFor=" let vehicle of vehicles ">
-            <app-vehicle-listing [id]="vehicle.id" [imageUrl]="vehicle.imageUrl " [make]="vehicle.make " [model]="vehicle.model" [year]="vehicle.year" [condition]="vehicle.condition " [term]="vehicle.term " [monthly]="vehicle.monthly " [mileage]="vehicle.mileage
-            " [location]="vehicle.location " [vehicle]="vehicle" (deleteClick)="deleteVehicle($event)"></app-vehicle-listing>
-
-        </li>
-    </ul>
 </section>

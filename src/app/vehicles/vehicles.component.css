@@ -103,3 +103,12 @@ input {
     box-shadow: 0 2px 2px hsl(240, 10%, 23%);
     color: white;
 }
+
+.message-box {
+ display:flex;
+ flex-direction: column;
+    width:800px;
+}
+.message-box img {
+    width:300px;
+   }
