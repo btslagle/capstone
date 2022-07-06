@@ -26,6 +26,8 @@ export class VehicleService {
   vehicles: Vehicle[] = [];
 
   constructor(private http: HttpClient) {}
+  
+  
   fetchVehicles() {
     return this.http.get<VehiclesResponse>(vehiclesEndpoint);
   }

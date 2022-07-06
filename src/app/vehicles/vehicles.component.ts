@@ -59,6 +59,7 @@ export class VehiclesComponent implements OnInit {
 
   }
 
+  
   onSelect(vehicle: Vehicle) {
     this.selectedVehicle = vehicle;
     

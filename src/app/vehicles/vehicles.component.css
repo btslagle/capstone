@@ -108,6 +108,7 @@ input {
  display:flex;
  flex-direction: column;
     width:800px;
+    line-height: .4px;
 }
 .message-box img {
     width:300px;
