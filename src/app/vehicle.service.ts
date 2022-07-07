@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Vehicle } from './models/Vehicle';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 
 type VehiclesResponse = {
   vehicles: Vehicle[];
@@ -48,8 +48,11 @@ export class VehicleService {
     })
   }
 
-  GetVechicleById(vehicle:Vehicle): Observable<Vehicle> {
-  return this.http.get<Vehicle>(`${vehiclesEndpoint}/${vehicle.id}`)
+  getVehicleById(id:number): Observable<Vehicle | any>{
+    return this.fetchVehicles().pipe(
+      map((response) => response.vehicles
+      .find((vehicle) => vehicle.id === id))
+    );
 }
   deleteVehicle(id: any) {
   return this.http.delete<Vehicle>(`${vehiclesEndpoint}/${id}`);
@@ -59,4 +62,12 @@ export class VehicleService {
   this.http.get<LocationResponse>('http://ip-api.com/json/')
   
 }
+
+//getProductById(id: number): Observable<Product | undefined> {
+//  return this.getProducts().pipe(
+//    map((response) => response.products
+//    .find((product) => product.id === id))
+//  );
 }
+
+

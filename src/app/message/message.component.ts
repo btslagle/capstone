@@ -17,31 +17,47 @@ export class MessageComponent   {
   selectedVehicle!: Vehicle;
   
   
-   router: Router;
-   @Input() id?: number;
-   @Input() imageUrl!: string;
-   @Input() make!: string;
-   @Input() model!: string;
-   @Input() year!: string;
-   @Input() condition!: string;
-   @Input() term!: string;
-   @Input() monthly!: string;
-   @Input() mileage!: string;
-   @Input() location!: string;
-   @Input() vehicle!: Vehicle;
+   
+  //@Input() id?: number;
+  @Input() imageUrl!: string;
+  @Input() make!: string;
+  @Input() model!: string;
+  @Input() year!: string;
+  @Input() condition!: string;
+  @Input() term!: string;
+  @Input() monthly!: string;
+  @Input() mileage!: string;
+  @Input() location!: string;
+  @Input() vehicle!: Vehicle;
+  router: Router;
+  
+  // vehicle!: Vehicle;
+
    @Output() closeClick = new EventEmitter();
-  vehicles?: Vehicle[];
+   vehicles?: Vehicle[];
   
   
 
   constructor(
     private vehicleService: VehicleService,
-    private activatedRoute: ActivatedRoute,
+    private route: ActivatedRoute,
     router: Router,
-    private locations: Location,
+    private locations: Location, 
   ) {
     this.router = router;
  }
+ id = Number(this.route.snapshot.paramMap.get("id"));
+ ngOnInit() {
+  this.getVehicle()
+ }
+
+ getVehicle(){
+   this.vehicleService.getVehicleById(this.id )
+   .subscribe(response => this.vehicle = response)
+   console.log(this.id)
+ }
+
+ 
  close(){
   window.location.reload();
 

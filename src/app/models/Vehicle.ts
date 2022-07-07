@@ -1,5 +1,5 @@
 export type Vehicle ={
-    id?: number;
+    id: number;
     imageUrl: string;
     make: string;
     model: string;

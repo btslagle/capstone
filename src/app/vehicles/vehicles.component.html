@@ -1,10 +1,12 @@
 <section>
   <h2>Vehicles</h2>
 
- <app-message *ngIf="selectedVehicle" [vehicle]="selectedVehicle" ></app-message>
+
   
   <ul>
     <li *ngFor="let vehicle of vehicles" (click)="onSelect(vehicle)">
+      
+      
       <app-vehicle-listing
         [id]="vehicle.id"
         [imageUrl]="vehicle.imageUrl"
@@ -19,6 +21,8 @@
         [vehicle]="vehicle"
         (deleteClick)="deleteVehicle($event)"
       ></app-vehicle-listing>
+      <a routerLink="/message/{{vehicle.id}}">Details</a>
+    
     </li>
   </ul>
 
